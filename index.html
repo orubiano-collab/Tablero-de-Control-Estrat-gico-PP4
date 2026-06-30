@@ -734,7 +734,7 @@ function renderSemaforo(m) {
   const pc = pct(m.urgDist['CRÍTICA'],m.total), pa = pct(m.urgDist.ALTA,m.total);
   let n,i,c,d;
   if (pc>=20||m.avgScore>=8.7) {n='CRÍTICA';i='🔴';c='critica';d=`${pc}% CRÍTICOS · Activación inmediata de protocolos.`;}
-  else if (pc>=10||pa>=30||m.avgScore>=3.8.3) {n='ALTA';i='🟠';c='alta';d=`${pc+pa}% en estado alto o crítico.`;}
+  else if (pc>=10||pa>=30||m.avgScore>=6.3) {n='ALTA';i='🟠';c='alta';d=`${pc+pa}% en estado alto o crítico.`;}
   else if (pa>=15||m.avgScore>=3.8) {n='MEDIA';i='🟡';c='media';d=`${pa}% ALTO. Intervención programada recomendada.`;}
   else {n='BAJA';i='🟢';c='baja';d='Nivel bajo. Monitoreo periódico recomendado.';}
   $i('semRing').className='sem-ring '+c;
